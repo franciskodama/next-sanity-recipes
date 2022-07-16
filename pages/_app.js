@@ -1,7 +1,21 @@
-import '../styles/globals.css'
+import Link from 'next/link';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <nav>
+        <div>
+          <Link href='/'>
+            <a>Kods Kitchen</a>
+          </Link>
+        </div>
+      </nav>
+      <main>
+        <Component {...pageProps} />
+      </main>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
